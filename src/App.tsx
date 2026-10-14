@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback, useMemo, lazy, Suspense } fro
 import { AnimatePresence, motion, useMotionValueEvent } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ChevronLeft } from 'lucide-react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { loadCachedOrFetchCover } from './services/coverCache';
 import VisualizerRenderer from './components/visualizer/VisualizerRenderer';
 import CommandPalette from './components/command-palette/CommandPalette';
@@ -2900,6 +2901,7 @@ export default function App() {
             <UserGuideModal theme={theme} />
             <PlaybackEntryViewPrompt theme={theme} />
             <LatticeFmNotice />
+            <SpeedInsights />
         </AppShell>
     );
 }
